@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_catalogo.css' %}">
+    <title>Catalogo</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo" class="logo"></a>
+        <div class="dropdown">
+            <button class="dropbtn">Electrónica 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="{% url 'catalogo' category='elect1' %}">Componentes</a>
+                <a href="{% url 'catalogo' category='elect2' %}">Dispositivos</a>
+                <a href="{% url 'catalogo' category='elect3' %}">Accesorios</a>
+            </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="{% url 'catalogo' category='herr1' %}">Manuales</a>
+                <a href="{% url 'catalogo' category='herr2' %}">Eléctricas</a>
+                <a href="{% url 'catalogo' category='herr3' %}">Accesorios</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Materiales 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="{% url 'catalogo' category='mat1' %}">Construcción</a>
+                <a href="{% url 'catalogo' category='mat2' %}">Industriales</a>
+                <a href="{% url 'catalogo' category='mat3' %}">Otros</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Elementos de Seguridad 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="{% url 'catalogo' category='seg1' %}">Ropa</a>
+                <a href="{% url 'catalogo' category='seg2' %}">Equipos</a>
+                <a href="{% url 'catalogo' category='seg3' %}">Accesorios</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="/search">
+                <input type="text" placeholder="Buscar..." name="search">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <a href="{% url 'login' %}" class="login-button">Login</a>
+    </div>
+
+    <div class="container mt-5 pt-5">
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'index' %}">Inicio</a></li>
+                <li class="breadcrumb-item" id="category-breadcrumb"></li>
+                <li class="breadcrumb-item active" id="subcategory-breadcrumb" aria-current="page"></li>
+            </ol>
+        </nav>
+
+        <div class="row" id="product-list">
+            <!-- Aquí se agregarán dinámicamente las tarjetas de producto -->
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+    
+<script src="{% static 'js/script_catalogo.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: inherit;
+    color: #333;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.navbar {
+    background-color: #BDF795; /* Color de fondo */
+    color: #333; /* Color del texto */
+    position: fixed; /* Hace que el navbar sea estático */
+    top: 0; /* Lo fija en la parte superior de la ventana */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+
+/* Estilo para la barra de búsqueda */
+.search-container input[type=text] {
+    border-radius: 5px; /* Radio de borde */
+}
+
+.footer {
+    background-color: #BDF795; /* Color de fondo */
+    color: #333; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    padding: 20px; /* Espaciado interior */
+    border-top: 1px solid #333; /* Borde superior opcional */
+}
+
+.login-button {
+    background-color: #333; /* Color gris oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interior */
+    text-align: center;
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #444; /* Cambio de color al pasar el mouse */
+    text-decoration: none;
+    color: #fff;
+}
+.product-card {
+    margin-bottom: 20px;
+}
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.breadcrumb {
+    margin-top: 80px; /* Espacio para el navbar fijo */
+}

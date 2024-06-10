@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_producto.css">
+    <title>Producto</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <div class="dropdown">
+            <button class="dropbtn">Electrónica 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="catalogo.html?category=elect1">Componentes</a>
+                <a href="catalogo.html?category=elect2">Dispositivos</a>
+                <a href="catalogo.html?category=elect3">Accesorios</a>
+            </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="catalogo.html?category=herr1">Manuales</a>
+                <a href="catalogo.html?category=herr2">Eléctricas</a>
+                <a href="catalogo.html?category=herr3">Accesorios</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Materiales 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="catalogo.html?category=mat1">Construcción</a>
+                <a href="catalogo.html?category=mat2">Industriales</a>
+                <a href="catalogo.html?category=mat3">Otros</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Elementos de Seguridad 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="catalogo.html?category=seg1">Ropa</a>
+                <a href="catalogo.html?category=seg2">Equipos</a>
+                <a href="catalogo.html?category=seg3">Accesorios</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="/search">
+                <input type="text" placeholder="Buscar..." name="search">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <a href="login.html" class="login-button">Login</a>
+    </div>
+
+    <div class="container mt-5 pt-5">
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="catalogo.html">Categorías</a></li>
+                <li class="breadcrumb-item active" id="product-breadcrumb" aria-current="page"></li>
+            </ol>
+        </nav>
+
+        <div class="product-detail" id="product-detail">
+            <!-- Aquí se agregarán dinámicamente los detalles del producto -->
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+<script src="js/script_producto.js"></script>
+</body>
+</html>

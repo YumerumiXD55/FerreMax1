@@ -1,0 +1,46 @@
+body {
+    background-color: white; /* Fondo blanco */
+}
+.navbar {
+    background-color: #BDF795; /* Color original del navbar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.login-button {
+    background-color: #2f3630;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.login-button:hover {
+    background-color: #1a1e1a;
+}
+.product-detail {
+    margin-top: 100px; /* Espacio para el navbar fijo */
+}
+.breadcrumb {
+    margin-top: 80px; /* Espacio para el navbar fijo */
+}

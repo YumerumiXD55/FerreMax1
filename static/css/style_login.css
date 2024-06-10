@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #BDF795; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    color: #fff;
+}
+
+.login-box {
+    background-color: #333; /* Color del contenedor */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #fff; /* Color del título */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #fff; /* Color de la etiqueta */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-button {
+    background-color: #BDF795; /* Color del botón */
+    color: #333; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #7FBF55; /* Color del botón al pasar el ratón */
+}
+
+.back-button {
+    color: #BDF795; /* Color del botón de regreso */
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.back-button:hover {
+    color: #7FBF55; /* Color del botón de regreso al pasar el ratón */
+}
+
+.register-link {
+    color: #7FBF55; /* Color del enlace de registro */
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+#error-message{
+    color: #C70039;
+}
+
+.login-logo {
+    width: 100px; /* Define el ancho deseado para el logo */
+    height: auto; /* Esto permite que la altura se ajuste automáticamente según el ancho especificado */
+    margin-bottom: 20px; /* Espacio entre el logo y el resto del contenido */
+    display: block; /* Para centrar horizontalmente el logo */
+    margin-left: auto;
+    margin-right: auto;
+}
