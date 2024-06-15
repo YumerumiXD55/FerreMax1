@@ -16,9 +16,9 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{% url 'catalogo' category='elect1' %}">Componentes</a>
-                <a href="{% url 'catalogo' category='elect2' %}">Dispositivos</a>
-                <a href="{% url 'catalogo' category='elect3' %}">Accesorios</a>
+                <a href="{}">Componentes</a>
+                <a href="{}">Dispositivos</a>
+                <a href="{}">Accesorios</a>
             </div>
         </div> 
         <div class="dropdown">
@@ -26,9 +26,9 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{% url 'catalogo' category='herr1' %}">Manuales</a>
-                <a href="{% url 'catalogo' category='herr2' %}">Eléctricas</a>
-                <a href="{% url 'catalogo' category='herr3' %}">Accesorios</a>
+                <a href="{}">Manuales</a>
+                <a href="{}">Eléctricas</a>
+                <a href="{}">Accesorios</a>
             </div>
         </div>
         <div class="dropdown">
@@ -36,9 +36,9 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{% url 'catalogo' category='mat1' %}">Construcción</a>
-                <a href="{% url 'catalogo' category='mat2' %}">Industriales</a>
-                <a href="{% url 'catalogo' category='mat3' %}">Otros</a>
+                <a href="{}">Construcción</a>
+                <a href="{}">Industriales</a>
+                <a href="{}">Otros</a>
             </div>
         </div>
         <div class="dropdown">
@@ -46,9 +46,9 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{% url 'catalogo' category='seg1' %}">Ropa</a>
-                <a href="{% url 'catalogo' category='seg2' %}">Equipos</a>
-                <a href="{% url 'catalogo' category='seg3' %}">Accesorios</a>
+                <a href="{}">Ropa</a>
+                <a href="{}">Equipos</a>
+                <a href="{}">Accesorios</a>
             </div>
         </div>
         <div class="search-container">
@@ -69,8 +69,21 @@
             </ol>
         </nav>
 
-        <div class="row" id="product-list">
-            <!-- Aquí se agregarán dinámicamente las tarjetas de producto -->
+        <div class="container mt-3">
+            <div class="row">
+                {% for producto in productos %}
+                    <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+                        <div class="card">
+                            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ producto.nombre }}</h5>
+                                <p class="card-text">Precio: ${{ producto.precio }}</p>
+                                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 
@@ -79,5 +92,8 @@
     </footer>
     
 <script src="{% static 'js/script_catalogo.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
