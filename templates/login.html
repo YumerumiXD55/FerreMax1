@@ -24,10 +24,13 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit" class="login-button">Iniciar Sesión</button>
+                
             </form>
             <p>¿No tienes una cuenta? <a href="{% url 'registro' %}" class="register-link">Regístrate</a></p>
             <p id="error-message" class="error-message"></p>
+            <button type="submit" onclick="call_login_google()" class="col2">Iniciar Google</button>
         </div>
+        
     </div>
 
     <script src="{% static 'js/script_login.js' %}"></script>
